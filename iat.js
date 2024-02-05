@@ -9,10 +9,9 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 
 	function iatExtension(options)
 	{
-		var API = new APIConstructor();		
+		var API = new APIConstructor();
 		var scorer = new Scorer();
         var piCurrent = API.getCurrent();
-		
 
 		//Here we set the settings of our task. 
 		//Read the comments to learn what each parameters means.
@@ -20,8 +19,6 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 		var iatObj =
 		{
 			fullscreen:false, //Should we show the task in full screen? A Qualtrics-only feature because in the usual Minno, we can go full-screen right at the beginning of the study.
-        
-			isTouch:true, //Set whether the task is on a touch device.
 			//Set the canvas of the task
 			canvas : {
 				maxWidth: 725,

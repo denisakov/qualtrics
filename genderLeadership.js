@@ -70,6 +70,7 @@ define(['pipAPI','https://denisakov.github.io/qualtrics/iat.js'], function(APICo
 			//Stimulus css
 			stimulusCss : {color:'#31940F','font-size':'2.3em'}
 		},
+		isTouch:true, //Set whether the task is on a touch device.
 		showDebriefing:true, //Show feedback in the last trial? Relevant only in a Qualtrics IAT because in Qualtrics we cannot access the saved feedback and IAT score later in the survey.
 		//Texts for the trials that show the debriefing.
 		preDebriefingText : 'Press space to see your result', //Text in the trial that comes before showing the debriefing.
