@@ -107,7 +107,9 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 				//Stimulus css
 				stimulusCss : {color:'#0000FF','font-size':'2.3em'}
 			},
-
+			base_url : {//Where are your images at?
+				image : '/implicit/user/yba/pipexample/biat/images/'
+			},
 			//nBlocks : 7, This is not-supported anymore. If you want a 5-block IAT, change blockSecondCombined_nTrials to 0.
 
 			////In each block, we can include a number of mini-blocks, to reduce repetition of same group/response.
