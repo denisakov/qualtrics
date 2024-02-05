@@ -75,10 +75,15 @@ define(['pipAPI','https://denisakov.github.io/qualtrics/iat.js'], function(APICo
 		//Texts for the trials that show the debriefing.
 		preDebriefingText : 'Asagidaki yesil alana dokunarak sonucunuza ulasabilirsiniz.', //Text in the trial that comes before showing the debriefing.
 		preDebriefingTouchText : 'Asagidaki yesil alana dokunarak sonucunuza ulasabilirsiniz.', //Touch version for the text in the trial that comes before showing the debriefing.
-		debriefingTextTop : 'Sonuc:', //Will be shown above the feedback text.
+		debriefingTextTop : 'Sonuc: ', //Will be shown above the feedback text.
 		//ATTENTION: We do not recommend showing participants their results. The IAT is a typical psychological measure so it is not very accurate. 
 		//In Project Implicit's website, you can see that we added much text to explain that there is still much unknown about the meaning of these results.
 		//We strongly recommend that you provide all these details in the debriefing of the experiment.
-		debriefingTextBottom : 'Lutfen sonucunuzu aklinizda tutunuz ve bir sonraki asamada coktan secmeli menuden seciniz.' //Will be shown below the feedback text. 
+		debriefingTextBottom : 'Lutfen sonucunuzu aklinizda tutunuz ve bir sonraki asamada coktan secmeli menuden seciniz.' //Will be shown below the feedback text.
+
+		fb_strong_Att1WithCatA_Att2WithCatB : 'Your responses suggested a strong automatic association for attribute1 with categoryA and attribute2 with categoryB.',
+		fb_moderate_Att1WithCatA_Att2WithCatB : 'Your responses suggested a moderate automatic association for attribute1 with categoryA and attribute2 with categoryB.',
+		fb_slight_Att1WithCatA_Att2WithCatB : 'Your responses suggested a slight automatic association for attribute1 with categoryA and attribute2 with categoryB.',
+		fb_equal_CatAvsCatB : 'Your responses suggested little or no automatic association between attribute2 and attribute1 with categoryA and categoryB.'
 	});
 })
