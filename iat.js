@@ -1,7 +1,14 @@
 define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) {
+
+	/**
+	Created by: Yoav Bar-Anan (baranan@gmail.com). Modified by Elad
+	 * @param  {Object} options Options that replace the defaults...
+	 * @return {Object}         PIP script
+	**/
+
 	function iatExtension(options)
 	{
-		var API = new APIConstructor();
+		var API = new APIConstructor();		
 		var scorer = new Scorer();
 		var piCurrent = API.getCurrent();
 
@@ -103,18 +110,9 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 			base_url : {//Where are your images at?
 				image : '/implicit/user/yba/pipexample/biat/images/'
 			},
-			showDebriefing:false, //Show feedback in the last trial? Relevant only in a Qualtrics IAT because in Qualtrics we cannot access the saved feedback and IAT score later in the survey.
-			//Texts for the trials that show the debriefing.
-			preDebriefingText : 'Press space to see your result', //Text in the trial that comes before showing the debriefing.
-			preDebriefingTouchText : 'Touch the bottom green area to see your result', //Touch version for the text in the trial that comes before showing the debriefing.
-			debriefingTextTop : 'Your result:', //Will be shown above the feedback text.
-			//ATTENTION: We do not recommend showing participants their results. The IAT is a typical psychological measure so it is not very accurate. 
-			//In Project Implicit's website, you can see that we added much text to explain that there is still much unknown about the meaning of these results.
-			//We strongly recommend that you provide all these details in the debriefing of the experiment.
-			debriefingTextBottom : 'This result is not a definitive assessment of your attitudes. It is provided for educational purposes only.', //Will be shown below the feedback text.
 
 			//nBlocks : 7, This is not-supported anymore. If you want a 5-block IAT, change blockSecondCombined_nTrials to 0.
-
+			
 			////In each block, we can include a number of mini-blocks, to reduce repetition of same group/response.
 			////If you set the number of trials in any block to 0, that block will be skipped.
 			blockAttributes_nTrials : 20,
@@ -337,7 +335,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 		//For debugging the logger
 		//window.minnoJS.logger = console.log;
 		//window.minnoJS.onEnd = console.log;
-
+		
         API.addSettings('logger', {
             // gather logs in array
             onRow: function(logName, log, settings, ctx){
@@ -407,7 +405,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
                             block3Cond //'bOrd'
                         ]);
                 //console.log('added');
-
+                        
                 content.unshift(headers);
                 return toCsv(content);
 
