@@ -17,7 +17,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 		//You can also do that from the outside, with a dedicated jsp file.
 		var iatObj =
 		{
-			istouch:true, //Set whether the task is on a touch device.
+			isTouch:false, //Set whether the task is on a touch device.
 			//Set the canvas of the task
 			canvas : {
 				maxWidth: 725,
@@ -339,8 +339,8 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
         API.addSettings('onEnd', window.minnoJS.onEnd);
 
 		//For debugging the logger
-		//window.minnoJS.logger = console.log;
-		//window.minnoJS.onEnd = console.log;
+		window.minnoJS.logger = console.log;
+		window.minnoJS.onEnd = console.log;
 
         API.addSettings('logger', {
 		    // gather logs in array
