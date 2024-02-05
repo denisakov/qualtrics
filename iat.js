@@ -433,9 +433,12 @@ define(['pipAPI', 'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/qualt
                 }
             },
             // Set logs into an input (i.e. put them wherever you want)
-            send: function(name, serialized){
-                window.minnoJS.logger(serialized);
-            }
+            // send: function(name, serialized){
+            //     window.minnoJS.logger(serialized);
+            // }
+            send: function(name, serialized, settings, ctx){
+		        document.getElementById('el').value = serialized;
+		    }
         });
 
 		// are we on the touch version
