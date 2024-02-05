@@ -69,4 +69,5 @@ define(['pipAPI','https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/qualtr
 				//Stimulus css
 				stimulusCss : {color:'#31940F','font-size':'2.3em'}
 			}
-});
+		});
+})
