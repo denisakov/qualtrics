@@ -14,7 +14,7 @@ define(['pipAPI','https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/qualtr
 					{word: 'Peter'},
 					{word: 'Ian'},
 					{word: 'Andrew'}
-				], 
+				],
 				//Stimulus css (style)
 				stimulusCss : {color:'#0000FF','font-size':'2.3em'}
 			},

@@ -1,4 +1,4 @@
-define(['pipAPI', 'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/qualtrics/quiat9.js'], function(APIConstructor, iatExtension){
+define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) {
 	function iatExtension(options)
 	{
 		var API = new APIConstructor();
