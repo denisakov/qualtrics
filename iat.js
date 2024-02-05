@@ -1,4 +1,3 @@
-//YBYB:Created from iat8.js, for Qualtrics
 define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) {
 
 	/**
@@ -18,7 +17,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 		//You can also do that from the outside, with a dedicated jsp file.
 		var iatObj =
 		{
-			istouch:false, //Set whether the task is on a touch device.
+			istouch:true, //Set whether the task is on a touch device.
 			//Set the canvas of the task
 			canvas : {
 				maxWidth: 725,
@@ -150,7 +149,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 			ITIDuration : 250, //Duration between trials.
 
 			fontColor : '#000000', //The default color used for printed messages.
-			
+
 			//Text and style for key instructions displayed about the category labels.
 			leftKeyText : 'Press "E" for', 
 			rightKeyText : 'Press "I" for', 
@@ -158,10 +157,8 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 			//Text and style for the separator between the top and bottom category labels.
 			orText : 'or', 
 			orCss : {'font-size':'1.8em', color:'#000000'},
-			
 			instWidth : 99, //The width of the instructions stimulus
-			
-			finalText : 'Press space to continue to the next task', 
+			finalText : 'Press space to continue to the next task',
 			finalTouchText : 'Touch the bottom green area to continue to the next task',
 
 			touchMaxStimulusWidth : '50%', 
