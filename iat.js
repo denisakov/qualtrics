@@ -309,10 +309,15 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 			//attribute1, and attribute2 will be replaced with the name of attribute1 and attribute2.
 			//categoryA is the name of the category that is found to be associated with attribute1,
 			//and categoryB is the name of the category that is found to be associated with attribute2.
-			fb_strong_Att1WithCatA_Att2WithCatB : 'Yanitlariniz attribute1 ile categoryA ve attribute2 ile categoryB arasinda guclu bir otomatik cagrisiminiz bulunduguna isaret etmektedir.',
-			fb_moderate_Att1WithCatA_Att2WithCatB : 'Yanitlariniz attribute1 ile categoryA ve attribute2 ile categoryB arasinda ortalama bir otomatik cagrisiminiz bulunduguna isaret etmektedir.',
-			fb_slight_Att1WithCatA_Att2WithCatB : 'Yanitlariniz attribute1 ile categoryA ve attribute2 ile categoryB arasinda hafif bir otomatik cagrisiminiz bulunduguna isaret etmektedir.',
-			fb_equal_CatAvsCatB : 'Yanıtlarınız attribute2 ve attribute1 ile categoryA ve categoryB arasinda otomatik bir cagrisiminiz bulunmadigina isaret etmektedir.',
+			// fb_strong_Att1WithCatA_Att2WithCatB : 'Yanitlariniz attribute1 ile categoryA ve attribute2 ile categoryB arasinda guclu bir otomatik cagrisiminiz bulunduguna isaret etmektedir.',
+			// fb_moderate_Att1WithCatA_Att2WithCatB : 'Yanitlariniz attribute1 ile categoryA ve attribute2 ile categoryB arasinda ortalama bir otomatik cagrisiminiz bulunduguna isaret etmektedir.',
+			// fb_slight_Att1WithCatA_Att2WithCatB : 'Yanitlariniz attribute1 ile categoryA ve attribute2 ile categoryB arasinda hafif bir otomatik cagrisiminiz bulunduguna isaret etmektedir.',
+			// fb_equal_CatAvsCatB : 'Yanıtlarınız attribute2 ve attribute1 ile categoryA ve categoryB arasinda otomatik bir cagrisiminiz bulunmadigina isaret etmektedir.',
+
+			fb_strong_Att1WithCatA_Att2WithCatB : 'Your responses suggested a strong automatic preference for categoryB over categoryA.',
+			fb_moderate_Att1WithCatA_Att2WithCatB : 'Your responses suggested a moderate automatic preference for categoryB over categoryA.',
+			fb_slight_Att1WithCatA_Att2WithCatB : 'Your responses suggested a slight automatic preference for categoryB over categoryA.',
+			fb_equal_CatAvsCatB : 'Your responses suggested no automatic preference between categoryA and categoryB.',
 
 			//Error messages in the feedback
 			manyErrors: 'Herhangi bir yanit belirlemek icin cok fazla hata yapilmistir.',
