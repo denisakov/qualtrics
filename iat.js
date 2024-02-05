@@ -13,12 +13,12 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 		var scorer = new Scorer();
         var piCurrent = API.getCurrent();
 
-		//Here we set the settings of our task. 
+		//Here we set the settings of our task.
 		//Read the comments to learn what each parameters means.
 		//You can also do that from the outside, with a dedicated jsp file.
 		var iatObj =
 		{
-			fullscreen:true, //Should we show the task in full screen? A Qualtrics-only feature because in the usual Minno, we can go full-screen right at the beginning of the study.
+			fullscreen:false, //Should we show the task in full screen? A Qualtrics-only feature because in the usual Minno, we can go full-screen right at the beginning of the study.
 			//Set the canvas of the task
 			canvas : {
 				maxWidth: 725,
@@ -109,11 +109,11 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 			},
 
 			base_url : {//Where are your images at?
-				image : '/implicit/user/yba/pipexample/biat/images/'
+				image : 'http://denisakov.github.io/qualtrics/images/'
 			},
 
 			//nBlocks : 7, This is not-supported anymore. If you want a 5-block IAT, change blockSecondCombined_nTrials to 0.
-			
+
 			////In each block, we can include a number of mini-blocks, to reduce repetition of same group/response.
 			////If you set the number of trials in any block to 0, that block will be skipped.
 			blockAttributes_nTrials : 20,
@@ -123,7 +123,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 			blockFirstCombined_nTrials : 20,
 			blockFirstCombined_nMiniBlocks : 5,
 			blockSecondCombined_nTrials : 40, //Change to 0 if you want 5 blocks (you would probably want to increase blockFirstCombined_nTrials).
-			blockSecondCombined_nMiniBlocks : 10, 
+			blockSecondCombined_nMiniBlocks : 10,
 			blockSwitch_nTrials : 28,
 			blockSwitch_nMiniBlocks : 7,
 
@@ -139,34 +139,34 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 			remindError : true,
 
 			remindErrorText : '<p align="center" style="font-size:"0.6em"; font-family:arial">' +
-			'If you make a mistake, a red <font color="#ff0000"><b>X</b></font> will appear. ' +
-			'Press the other key to continue.<p/>',
+			'Eger hata yaparsaniz, kirmizi bir <font color="#ff0000"><b>X</b></font> gorunecektir. ' +
+            'Ilerlemek icin lutfen diger tusa basiniz.<p/>',
 
 			remindErrorTextTouch : '<p align="center" style="font-size:"1.4em"; font-family:arial">' +
-			'If you make a mistake, a red <font color="#ff0000"><b>X</b></font> will appear. ' +
-			'Touch the other side to continue.<p/>',
+			'Eger bir hata yaparsaniz, kirmizi bir <font color="#ff0000"><b>X</b></font> gorunecektir. ' +
+            'Ilerlemek icin lutfen diger tarafa basiniz.<p/>',
 
 			errorCorrection : true, //Should participants correct error responses?
 			errorFBDuration : 500, //Duration of error feedback display (relevant only when errorCorrection is false)
 			ITIDuration : 250, //Duration between trials.
 
 			fontColor : '#000000', //The default color used for printed messages.
-			
+
 			//Text and style for key instructions displayed about the category labels.
-			leftKeyText : 'Press "E" for', 
-			rightKeyText : 'Press "I" for', 
+			leftKeyText : 'Lutfen "E" harfine basiniz',
+			rightKeyText : 'Lutfen "I" harfine basiniz',
 			keysCss : {'font-size':'0.8em', 'font-family':'courier', color:'#000000'},
 			//Text and style for the separator between the top and bottom category labels.
-			orText : 'or', 
+			orText : 'ya da',
 			orCss : {'font-size':'1.8em', color:'#000000'},
-			
-			instWidth : 99, //The width of the instructions stimulus
-            
-			finalText : 'Press space to continue to the next task', 
-			finalTouchText : 'Touch the bottom green area to continue to the next task',
 
-			touchMaxStimulusWidth : '50%', 
-			touchMaxStimulusHeight : '50%', 
+			instWidth : 99, //The width of the instructions stimulus
+
+			finalText : 'Bir sonraki goreve gecmek icin lutfen bosluk tusuna basiniz.',
+			finalTouchText : 'Bir sonraki goreve gecmek icin lutfen asagidaki yesil alana basiniz',
+
+			touchMaxStimulusWidth : '50%',
+			touchMaxStimulusHeight : '50%',
 			bottomTouchCss: {}, //Add any CSS value you want for changing the css of the bottom touch area.
 
 			//Instructions text.
@@ -175,132 +175,127 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 			// leftCategory, rightCategory, leftAttribute and rightAttribute, blockNum, nBlocks.
 			// Notice that this is HTML text.
 			instAttributePractice: '<div><p align="center" style="font-size:20px; font-family:arial">' +
-				'<font color="#000000"><u>Part blockNum of nBlocks </u><br/><br/></p>' +
+				'<font color="#000000"><u>Sayfa blockNum / nBlocks </u><br/><br/></p>' +
 				'<p style="font-size:20px; text-align:left; vertical-align:bottom; margin-left:10px; font-family:arial">' +
-				'Put a left finger on the <b>E</b> key for items that belong to the category <font color="#0000ff">leftAttribute.</font>' +
-				'<br/>Put a right finger on the <b>I</b> key for items that belong to the category <font color="#0000ff">rightAttribute</font>.<br/><br/>' +
-				'If you make a mistake, a red <font color="#ff0000"><b>X</b></font> will appear. ' +
-				'Press the other key to continue.<br/>' +
-				'<u>Go as fast as you can</u> while being accurate.<br/><br/></p>'+
-				'<p align="center">Press the <b>space bar</b> when you are ready to start.</font></p></div>',
+				'Lutfen sol isaret parmaginizi <b>E</b> tusuna su kategoride yer alan kelimeler icin yerlestiriniz <font color="#0000ff">leftAttribute.</font>' +
+				'<br/>Lutfen sag isaret parmaginizi <b>I</b> tusuna su kategoride yer alan kelimeler icin yerlestiriniz <font color="#0000ff">rightAttribute</font>.<br/><br/>' +
+				'Eger bir hata yaparsaniz, kirmizi bir <font color="#ff0000"><b>X</b></font> gorunecektir. ' +
+				'İlerlemek icin lutfen diger tusa basiniz <br/>' +
+				'<u>Mumkun oldugunca hizli gidiniz </u> ve bu sirada dogru yanitlari secmeye gayret ediniz.<br/><br/></p>'+
+				'<p align="center">Lutfen hazir oldugunuzda <b>bosluk tusuna /b> basiniz.</font></p></div>',
 			instAttributePracticeTouch: [
 				'<div>',
 					'<p align="center">',
-						'<u>Part blockNum of nBlocks</u>',
+						'<u>Sayfa blockNum / nBlocks</u>',
 					'</p>',
 					'<p align="left" style="margin-left:5px">',
 						'<br/>',
-						'Put a left finger over the the <b>left</b> green area for items that belong to the category <font color="#0000ff">leftAttribute</font>.<br/>',
-						'Put a right finger over the <b>right</b> green area for items that belong to the category <font color="#0000ff">rightAttribute</font>.<br/>',
-						'Items will appear one at a time.<br/>',
+						'Lutfen sol isaret parmaginizi <b>soldaki</b> yesil alana su kategoride yer alan kelimeler icin yerlestiriniz <font color="#0000ff">leftAttribute</font>.<br/>',
+						'Lutfen sag isaret parmaginizi <b>sagdaki</b> yesil alana su kategoride yer alan kelimeler icin yerlestiriniz <font color="#0000ff">rightAttribute</font>.<br/>',
+						'Kelimeler tek tek ekranda belirecektir.<br/>',
 						'<br/>',
-						'If you make a mistake, a red <font color="#ff0000"><b>X</b></font> will appear. Touch the other side. <u>Go as fast as you can</u> while being accurate.',
+						'Eger bir hata yaparsaniz, kirmizi bir <font color="#ff0000"><b>X</b></font> gorunecektir. Lutfen diger tarafa dokununuz. <u>Mumkun oldugunca hizli gidiniz</u> ve bu sirada dogru yanitlari secmeye gayret ediniz.',
 					'</p>',
-					'<p align="center">Touch the <b>lower </b> green area to start.</p>',
+					'<p align="center">Lutfen baslamak icin <b>asagidaki </b> yesil alana dokununuz.</p>',
 				'</div>'
 			].join('\n'),
-
 			instCategoriesPractice: '<div><p align="center" style="font-size:20px; font-family:arial">' +
-				'<font color="#000000"><u>Part blockNum of nBlocks </u><br/><br/></p>' +
+				'<font color="#000000"><u>Sayfa blockNum / nBlocks </u><br/><br/></p>' +
 				'<p style="font-size:20px; text-align:left; vertical-align:bottom; margin-left:10px; font-family:arial">' +
-				'Put a left finger on the <b>E</b> key for items that belong to the category <font color="#336600">leftCategory</font>. ' +
-				'<br/>Put a right finger on the <b>I</b> key for items that belong to the category <font color="#336600">rightCategory</font>.<br/>' +
-				'Items will appear one at a time.<br/><br/>' +
-				'If you make a mistake, a red <font color="#ff0000"><b>X</b></font> will appear. ' +
-				'Press the other key to continue.<br/>' +
-				'<u>Go as fast as you can</u> while being accurate.<br/><br/></p>'+
-				'<p align="center">Press the <b>space bar</b> when you are ready to start.</font></p></div>',
+				'Lutfen sol isaret parmaginizi <b>E</b> tusuna su kategoride yer alan kelimeler icin yerlestiriniz <font color="#0000ff">leftAttribute.</font>' +
+				'<br/>Lutfen sag isaret parmaginizi <b>I</b> tusuna su kategoride yer alan kelimeler icin yerlestiriniz <font color="#0000ff">rightAttribute</font>.<br/><br/>' +
+				'Eger bir hata yaparsaniz, kirmizi bir <font color="#ff0000"><b>X</b></font> gorunecektir. ' +
+				'İlerlemek icin lutfen diger tusa basiniz <br/>' +
+				'<u>Mumkun oldugunca hizli gidiniz </u> ve bu sirada dogru yanitlari secmeye gayret ediniz.<br/><br/></p>'+
+				'<p align="center">Lutfen hazir oldugunuzda <b>bosluk tusuna /b> basiniz.</font></p></div>',
 			instCategoriesPracticeTouch: [
 				'<div>',
 					'<p align="center">',
-						'<u>Part blockNum of nBlocks</u>',
+						'<u>Sayfa blockNum / nBlocks</u>',
 					'</p>',
 					'<p align="left" style="margin-left:5px">',
 						'<br/>',
-						'Put a left finger over the <b>left</b> green area for items that belong to the category <font color="#336600">leftCategory</font>.<br/>',
-						'Put a right finger over the <b>right</b> green area for items that belong to the category <font color="#336600">rightCategory</font>.<br/>',
-						'Items will appear one at a time.<br/>',
+						'Lutfen sol isaret parmaginizi <b>soldaki</b> yesil alana su kategoride yer alan kelimeler icin yerlestiriniz <font color="#0000ff">leftAttribute</font>.<br/>',
+						'Lutfen sag isaret parmaginizi <b>sagdaki</b> yesil alana su kategoride yer alan kelimeler icin yerlestiriniz <font color="#0000ff">rightAttribute</font>.<br/>',
+						'Kelimeler tek tek ekranda belirecektir.<br/>',
 						'<br/>',
-						'If you make a mistake, a red <font color="#ff0000"><b>X</b></font> will appear. Touch the other side. <u>Go as fast as you can</u> while being accurate.',
+						'Eger bir hata yaparsaniz, kirmizi bir <font color="#ff0000"><b>X</b></font> gorunecektir. Lutfen diger tarafa dokununuz. <u>Mumkun oldugunca hizli gidiniz</u> ve bu sirada dogru yanitlari secmeye gayret ediniz.',
 					'</p>',
-					'<p align="center">Touch the <b>lower </b> green area to start.</p>',
+					'<p align="center">Lutfen baslamak icin <b>asagidaki</b> yesil alana dokununuz.</p>',
 				'</div>'
 			].join('\n'),
 
 			instFirstCombined : '<div><p align="center" style="font-size:20px; font-family:arial">' +
-				'<font color="#000000"><u>Part blockNum of nBlocks </u><br/><br/></p>' +
+				'<font color="#000000"><u>Sayfa blockNum / nBlocks </u><br/><br/></p>' +
 				'<p style="font-size:20px; text-align:left; vertical-align:bottom; margin-left:10px; font-family:arial">' +
-				'Use the <b>E</b> key for <font color="#336600">leftCategory</font> and for <font color="#0000ff">leftAttribute</font>.<br/>' +
-				'Use the <b>I</b> key for <font color="#336600">rightCategory</font> and for  <font color="#0000ff">rightAttribute</font>.<br/>' +
-				'Each item belongs to only one category.<br/><br/>' +
-				'If you make a mistake, a red <font color="#ff0000"><b>X</b></font> will appear. ' +
-				'Press the other key to continue.<br/>' + 
-				'<u>Go as fast as you can</u> while being accurate.<br/><br/></p>' +
-				'<p align="center">Press the <b>space bar</b> when you are ready to start.</font></p></div>',
+				'Lutfen <b>E</b> tusunu <font color="#336600">leftCategory</font> icin ve <font color="#0000ff">leftAttribute</font> icin kullaniniz.<br/>'+
+				'Lutfen <b>I</b> tusunu <font color="#336600">rightCategory</font> icin ve <font color="#0000ff">rightAttribute</font> icin kullaniniz.<br/>'+
+				'Her bir kelime yalnizca bir kategoride yer almaktadir.<br/><br/>' +
+				'Eger bir hata yaparsaniz, kirmizi bir <font color="#ff0000"><b>X</b></font> gorunecektir. ' +
+				'İlerlemek icin lutfen diger tusa basiniz.<br/>' +
+				'<u>Mumkun oldugunca hizli gidiniz</u> ve bu sirada dogru yanitlari secmeye gayret ediniz.<br/><br/></p>' +
+				'<p align="center">Lutfen hazir oldugunuzda <b>bosluk tusuna</b> basiniz.</font></p></div>',
 			instFirstCombinedTouch:[
 				'<div>',
 					'<p align="center">',
-						'<u>Part blockNum of nBlocks</u>',
+						'<u>Sayfa blockNum / nBlocks</u>',
 					'</p>',
 					'<br/>',
 					'<br/>',
 					'<p align="left" style="margin-left:5px">',
-						'Put a left finger over the <b>left</b> green area for <font color="#336600">leftCategory</font> items and for <font color="#0000ff">leftAttribute</font>.</br>',
-						'Put a right finger over the <b>right</b> green area for <font color="#336600">rightCategory</font> items and for <font color="#0000ff">rightAttribute</font>.</br>',
-							'If you make a mistake, a red <font color="#ff0000"><b>X</b></font> will appear. Touch the other side. <u>Go as fast as you can</u> while being accurate.</br>',
+						'Lutfen sol isaret parmaginizi <b>soldaki</b> yesil alana su kategoride yer alan kelimeler <font color="#336600">leftCategory</font> ve su kategoride yer alan kelimeler icin yerlestiriniz <font color="#0000ff">leftAttribute</font>.</br>',
+						'Lutfen sol isaret parmaginizi <b>sagdaki </b> yesil alana su kategoride yer alan kelimeler <font color="#336600">rightCategory</font> ve su kategoride yer alan kelimeler icin yerlestiriniz <font color="#0000ff">rightAttribute</font>.</br>',
+						'Eger bir hata yaparsaniz, kirmizi bir <font color="#ff0000"><b>X</b></font> gorunecektir. Lutfen diger tarafa dokununuz. <u>Mumkun oldugunca hizli gidiniz</u> ve bu sirada dogru yanitlari secmeye gayret ediniz.</br>',
 						'</p>',
-						'<p align="center">Touch the <b>lower </b> green area to start.</p>',
+						'<p align="center">Lutfen hazir oldugunuzda <b>asagidaki</b> yesil alana dokununuz.</p>',
 				'</div>'
 			].join('\n'),
-
 			instSecondCombined : '<div><p align="center" style="font-size:20px; font-family:arial">' +
-				'<font color="#000000"><u>Part blockNum of nBlocks </u><br/><br/></p>' +
+				'<font color="#000000"><u>Sayfa blockNum / nBlocks </u><br/><br/></p>' +
 				'<p style="font-size:20px; text-align:left; vertical-align:bottom; margin-left:10px; font-family:arial">' +
-				'This is the same as the previous part.<br/>' +
-				'Use the <b>E</b> key for <font color="#336600">leftCategory</font> and for <font color="#0000ff">leftAttribute</font>.<br/>' +
-				'Use the <b>I</b> key for <font color="#336600">rightCategory</font> and for  <font color="#0000ff">rightAttribute</font>.<br/>' +
-				'Each item belongs to only one category.<br/><br/>' +
-				'<u>Go as fast as you can</u> while being accurate.<br/><br/></p>' +
-				'<p align="center">Press the <b>space bar</b> when you are ready to start.</font></p></div>',
+				'Bu kisim, bir onceki kisimla aynidir.<br/>' +
+				'Lutfen <b>E</b> tusunu <font color="#336600">leftCategory</font> icin ve <font color="#0000ff">leftAttribute</font> icin kullaniniz.<br/>'+
+				'Lutfen <b>I</b> tusunu <font color="#336600">rightCategory</font> icin ve <font color="#0000ff">rightAttribute</font> icin kullaniniz.<br/>'+
+				'Her bir kelime yalnizca bir kategoride yer almaktadir.<br/><br/>' +
+				'<u>Mumkun oldugunca hizli gidiniz</u> ve bu sirada dogru yanitlari secmeye gayret ediniz.<br/><br/></p>' +
+				'<p align="center">Lutfen hazir oldugunuzda <b>bosluk tusuna</b> basiniz.</font></p></div>',
 			instSecondCombinedTouch:[
 				'<div>',
-					'<p align="center"><u>Part blockNum of nBlocks</u></p>',
+					'<p align="center"><u>Sayfa blockNum / nBlocks</u></p>',
 					'<br/>',
 					'<br/>',
-
 					'<p align="left" style="margin-left:5px">',
-						'Put a left finger over the <b>left</b> green area for <font color="#336600">leftCategory</font> items and for <font color="#0000ff">leftAttribute</font>.<br/>',
-						'Put a right finger over the <b>right</b> green area for <font color="#336600">rightCategory</font> items and for <font color="#0000ff">rightAttribute</font>.<br/>',
+						'Lutfen sol isaret parmaginizi <b>soldaki</b> yesil alana su kategoride yer alan kelimeler <font color="#336600">leftCategory</font> ve su kategoride yer alan kelimeler icin yerlestiriniz <font color="#0000ff">leftAttribute</font>.<br/>',
+						'Lutfen sol isaret parmaginizi <b>sagdaki </b> yesil alana su kategoride yer alan kelimeler <font color="#336600">rightCategory</font> ve su kategoride yer alan kelimeler icin yerlestiriniz <font color="#0000ff">rightAttribute</font>.<br/>',
 						'<br/>',
-						'<u>Go as fast as you can</u> while being accurate.<br/>',
+						'<u>Mumkun oldugunca hizli gidiniz</u> ve bu sirada dogru yanitlari secmeye gayret ediniz.<br/>',
 					'</p>',
-					'<p align="center">Touch the <b>lower </b> green area to start.</p>',
+					'<p align="center">Lutfen hazir oldugunuzda <b>asagidaki</b> yesil alana dokununuz.</p>',
 				'</div>'
 			].join('\n'),
-
 			instSwitchCategories : '<div><p align="center" style="font-size:20px; font-family:arial">' +
-				'<font color="#000000"><u>Part blockNum of nBlocks </u><br/><br/></p>' +
+				'<font color="#000000"><u>Sayfa blockNum / nBlocks </u><br/><br/></p>' +
 				'<p style="font-size:20px; text-align:left; vertical-align:bottom; margin-left:10px; font-family:arial">' +
-				'<b>Watch out, the labels have changed position!</b><br/>' +
-				'Put the left finger on the <b>E</b> key for <font color="#336600">leftCategory</font>.<br/>' +
-				'Put the right finger on the <b>I</b> key for <font color="#336600">rightCategory</font>.<br/><br/>' +
-				'<u>Go as fast as you can</u> while being accurate.<br/><br/></p>' +
-				'<p align="center">Press the <b>space bar</b> when you are ready to start.</font></p></div>',
+				'<b>Lütfen dikkat ediniz, etiketler yer değiştirdi! </b><br/>' +
+				'Lütfen sol isaret parmaginizi <b>E</b> harfine su kategoriler icin yerlestiriniz <font color="#336600">leftCategory</font>.<br/>' +
+				'Lutfen sag isaret parmaginizi <b>I</b> tusuna su kategoriler icin yerlestiriniz <font color="#336600">rightCategory</font>.<br/>' +
+				'<u>Mumkun oldugunca hizli gidiniz</u> ve bu sirada dogru yanitlari secmeye gayret ediniz. <br/><br/></p>' +
+				'<p align="center">Lutfen hazir oldugunuzda <b>bosluk tusuna</b> basiniz.</font></p></div>',
 			instSwitchCategoriesTouch: [
 				'<div>',
 					'<p align="center">',
-						'<u>Part blockNum of nBlocks</u>',
+						'<u>Sayfa blockNum / nBlocks</u>',
 					'</p>',
 					'<p align="left" style="margin-left:5px">',
 						'<br/>',
-						'Watch out, the labels have changed position!<br/>',
-							'Put a left finger over the <b>left</b> green area for <font color="#336600">leftCategory</font> items.<br/>',
-							'Put a right finger over the <b>right</b> green area for <font color="#336600">rightCategory</font> items.<br/>',
-							'Items will appear one at a time.',
-							'<br/>',
-							'If you make a mistake, a red <font color="#ff0000"><b>X</b></font> will appear. Touch the other side. <u>Go as fast as you can</u> while being accurate.<br/>',
+						'Lütfen dikkat ediniz, etiketler yer değiştirdi!<br/>',
+						'Lutfen sol isaret parmaginizi <b>soldaki</b> yesil alana su kelimeler icin <font color="#336600">leftCategory</font> yerlestiriniz.<br/>',
+						'Lutfen sag isaret parmaginizi<b>sagdaki</b> yesil alana su kelimeler icin <font color="#336600">rightCategory</font> yerlestiriniz. <br/>',
+						'Kelimeler tek tek ekranda belirecektir.',
+						'<br/>',
+						'Eger bir hata yaparsaniz, kirmizi bir <font color="#ff0000"><b>X</b></font> gorunecektir. Lutfen diger tarafa dokununuz. <u>Mumkun oldugunca hizli gidiniz</u> ve bu sirada dogru yanitlari secmeye gayret ediniz.<br/>',
 						'</p>',
-						'<p align="center">Touch the <b>lower </b> green area to start.</p>',
+						'<p align="center">Lutfen hazir oldugunuzda <b>asagidaki</b> yesil alana dokununuz.</p>',
 				'</div>'
 			].join('\n'),
 
@@ -313,15 +308,15 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 			//attribute1, and attribute2 will be replaced with the name of attribute1 and attribute2.
 			//categoryA is the name of the category that is found to be associated with attribute1,
 			//and categoryB is the name of the category that is found to be associated with attribute2.
-			fb_strong_Att1WithCatA_Att2WithCatB : 'Your responses suggested a strong automatic preference for categoryB over categoryA.',
-			fb_moderate_Att1WithCatA_Att2WithCatB : 'Your responses suggested a moderate automatic preference for categoryB over categoryA.',
-			fb_slight_Att1WithCatA_Att2WithCatB : 'Your responses suggested a slight automatic preference for categoryB over categoryA.',
-			fb_equal_CatAvsCatB : 'Your responses suggested no automatic preference between categoryA and categoryB.',
+			fb_strong_Att1WithCatA_Att2WithCatB : 'Yanitlariniz attribute1 ile categoryA ve attribute2 ile categoryB arasinda guclu bir otomatik cagrisiminiz bulunduguna isaret etmektedir.',
+			fb_moderate_Att1WithCatA_Att2WithCatB : 'Yanitlariniz attribute1 ile categoryA ve attribute2 ile categoryB arasinda ortalama bir otomatik cagrisiminiz bulunduguna isaret etmektedir.',
+			fb_slight_Att1WithCatA_Att2WithCatB : 'Yanitlariniz attribute1 ile categoryA ve attribute2 ile categoryB arasinda hafif bir otomatik cagrisiminiz bulunduguna isaret etmektedir.',
+			fb_equal_CatAvsCatB : 'Yanıtlarınız attribute2 ve attribute1 ile categoryA ve categoryB arasinda otomatik bir cagrisiminiz bulunmadigina isaret etmektedir.',
 
 			//Error messages in the feedback
-			manyErrors: 'There were too many errors made to determine a result.',
-			tooFast: 'There were too many fast trials to determine a result.',
-			notEnough: 'There were not enough trials to determine a result.'
+			manyErrors: 'Herhangi bir yanit belirlemek icin cok fazla hata yapilmistir.',
+			tooFast: 'Herhangi bir yanit belirlemek icin cok fazla hizli giris yapilmistir.',
+			notEnough: 'Herhangi bir yanit belirlemek icin yeterli giris yapilmamistir.'
 		};
 
 		// extend the "current" object with the default
@@ -336,7 +331,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 		//For debugging the logger
 		//window.minnoJS.logger = console.log;
 		//window.minnoJS.onEnd = console.log;
-		
+
         API.addSettings('logger', {
             // gather logs in array
             onRow: function(logName, log, settings, ctx){
@@ -405,7 +400,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
                             piCurrent.feedback, //'fb'
                             block3Cond //'bOrd'
                         ]);
-                //console.log('added');
+                console.log('added');
                 content.unshift(headers);
                 return toCsv(content);
 
@@ -1256,7 +1251,6 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 				actions: [{type: 'endTrial'}]
 			}]
 		});
-        
         //if showDebriefing==True, we will show the feedback to the user
         if(showDebriefing){
             //////////////////////////////
