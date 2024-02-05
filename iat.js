@@ -134,11 +134,11 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 			//Show a reminder what to do on error, throughout the task
 			remindError : true,
 
-			remindErrorText : '<p align="center" style="font-size:"0.6em"; font-family: Helvetica, Arial, sans-serif;">' +
+			remindErrorText : '<p align="center" style="font-size:"0.6em"; font-family=arial;">' +
 			'Eger hata yaparsaniz, kirmizi bir <font color="#ff0000"><b>X</b></font> gorunecektir. ' +
             'Ilerlemek icin lutfen diger tusa basiniz.</p>',
 
-			remindErrorTextTouch : '<p align="center" style="font-size:"1.4em"; font-family: Helvetica, Arial, sans-serif;">' +
+			remindErrorTextTouch : '<p align="center" style="font-size:"1.4em"; font-family=arial;">' +
 			'Eger bir hata yaparsaniz, kirmizi bir <font color="#ff0000"><b>X</b></font> gorunecektir. ' +
             'Ilerlemek icin lutfen diger tarafa basiniz.</p>',
 
@@ -213,8 +213,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 						'<br/>',
 						'Lutfen sol isaret parmaginizi <b>soldaki</b> yesil alana su kategoride yer alan kelimeler icin yerlestiriniz <font color="#0000ff">leftAttribute</font>.<br/>',
 						'Lutfen sag isaret parmaginizi <b>sagdaki</b> yesil alana su kategoride yer alan kelimeler icin yerlestiriniz <font color="#0000ff">rightAttribute</font>.<br/>',
-						'Kelimeler tek tek ekranda belirecektir.<br/>',
-						'<br/>',
+						'Kelimeler tek tek ekranda belirecektir.<br/><br/>',
 						'Eger bir hata yaparsaniz, kirmizi bir <font color="#ff0000"><b>X</b></font> gorunecektir. Lutfen diger tarafa dokununuz. <u>Mumkun oldugunca hizli gidiniz</u> ve bu sirada dogru yanitlari secmeye gayret ediniz.',
 					'</p>',
 					'<p align="center" style="font-family: Helvetica, Arial, sans-serif;">Lutfen hazir oldugunuzda <b>asagidaki</b> yesil alana dokununuz.</p>',
@@ -242,8 +241,8 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 						'Lutfen sol isaret parmaginizi <b>soldaki</b> yesil alana su kategoride yer alan kelimeler <font color="#336600">leftCategory</font> ve su kategoride yer alan kelimeler icin yerlestiriniz <font color="#0000ff">leftAttribute</font>.</br>',
 						'Lutfen sol isaret parmaginizi <b>sagdaki </b> yesil alana su kategoride yer alan kelimeler <font color="#336600">rightCategory</font> ve su kategoride yer alan kelimeler icin yerlestiriniz <font color="#0000ff">rightAttribute</font>.</br>',
 						'Eger bir hata yaparsaniz, kirmizi bir <font color="#ff0000"><b>X</b></font> gorunecektir. Lutfen diger tarafa dokununuz. <u>Mumkun oldugunca hizli gidiniz</u> ve bu sirada dogru yanitlari secmeye gayret ediniz.</br>',
-						'</p>',
-						'<p align="center" style="font-family: Helvetica, Arial, sans-serif;">Lutfen hazir oldugunuzda <b>asagidaki</b> yesil alana dokununuz.</p>',
+					'</p>',
+					'<p align="center" style="font-family: Helvetica, Arial, sans-serif;">Lutfen hazir oldugunuzda <b>asagidaki</b> yesil alana dokununuz.</p>',
 				'</div>'
 			].join('\n'),
 			instSecondCombined : '<div><p align="center" style="font-size:20px; font-family: Helvetica, Arial, sans-serif;">' +
@@ -264,8 +263,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 					'<p align="left" style="font-family: Helvetica, Arial, sans-serif; margin-left:5px;">',
 						'Lutfen sol isaret parmaginizi <b>soldaki</b> yesil alana su kategoride yer alan kelimeler <font color="#336600">leftCategory</font> ve su kategoride yer alan kelimeler icin yerlestiriniz <font color="#0000ff">leftAttribute</font>.<br/>',
 						'Lutfen sol isaret parmaginizi <b>sagdaki </b> yesil alana su kategoride yer alan kelimeler <font color="#336600">rightCategory</font> ve su kategoride yer alan kelimeler icin yerlestiriniz <font color="#0000ff">rightAttribute</font>.<br/>',
-						'Eger bir hata yaparsaniz, kirmizi bir <font color="#ff0000"><b>X</b></font> gorunecektir. Lutfen diger tarafa dokununuz. ',
-						'<br/>',
+						'Eger bir hata yaparsaniz, kirmizi bir <font color="#ff0000"><b>X</b></font> gorunecektir. Lutfen diger tarafa dokununuz. <br/>',
 						'<u>Mumkun oldugunca hizli gidiniz</u> ve bu sirada dogru yanitlari secmeye gayret ediniz.<br/>',
 					'</p>',
 					'<p align="center" style="font-family: Helvetica, Arial, sans-serif;">Lutfen hazir oldugunuzda <b>asagidaki</b> yesil alana dokununuz.</p>',
@@ -289,8 +287,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 						'Lütfen dikkat ediniz, etiketler yer değiştirdi!<br/>',
 						'Lutfen sol isaret parmaginizi <b>soldaki</b> yesil alana su kelimeler icin <font color="#336600">leftCategory</font> yerlestiriniz.<br/>',
 						'Lutfen sag isaret parmaginizi <b>sagdaki</b> yesil alana su kelimeler icin <font color="#336600">rightCategory</font> yerlestiriniz. <br/>',
-						'Kelimeler tek tek ekranda belirecektir.',
-						'<br/>',
+						'Kelimeler tek tek ekranda belirecektir.<br/>',
 						'Eger bir hata yaparsaniz, kirmizi bir <font color="#ff0000"><b>X</b></font> gorunecektir. Lutfen diger tarafa dokununuz. <u>Mumkun oldugunca hizli gidiniz</u> ve bu sirada dogru yanitlari secmeye gayret ediniz.<br/></p>',
 						'<p align="center" style="font-family: Helvetica, Arial, sans-serif;">Lutfen hazir oldugunuzda <b>asagidaki</b> yesil alana dokununuz.</p>',
 				'</div>'
