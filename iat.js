@@ -1,11 +1,4 @@
-define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) {
-
-	/**
-	Created by: Yoav Bar-Anan (baranan@gmail.com). Modified by Elad
-	 * @param  {Object} options Options that replace the defaults...
-	 * @return {Object}         PIP script
-	**/
-
+define(['pipAPI', 'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/qualtrics/quiat9.js'], function(APIConstructor, iatExtension){
 	function iatExtension(options)
 	{
 		var API = new APIConstructor();
@@ -344,7 +337,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 		//For debugging the logger
 		//window.minnoJS.logger = console.log;
 		//window.minnoJS.onEnd = console.log;
-		
+
         API.addSettings('logger', {
             // gather logs in array
             onRow: function(logName, log, settings, ctx){
