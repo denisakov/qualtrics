@@ -1,4 +1,4 @@
-define(['pipAPI','/implicit/user/lauren/contract.vidal.race/iat5.js'], function(APIConstructor, iatExtension){
+define(['pipAPI','https://denisakov.github.io/qualtrics/iat.js'], function(APIConstructor, iatExtension){
 	var API = new APIConstructor();
     return iatExtension({
       attribute1 : {
@@ -71,7 +71,6 @@ define(['pipAPI','/implicit/user/lauren/contract.vidal.race/iat5.js'], function(
 			//Stimulus css
 			stimulusCss : {color:'#31940F','font-size':'2.3em'}
 		},
-		
 		//The default feedback messages for each cutoff -
 			//attribute1, and attribute2 will be replaced with the name of attribute1 and attribute2.
 			//categoryA is the name of the category that is found to be associated with attribute1,
@@ -80,9 +79,5 @@ define(['pipAPI','/implicit/user/lauren/contract.vidal.race/iat5.js'], function(
 			fb_moderate_Att1WithCatA_Att2WithCatB : 'Your responses suggested a moderate automatic association for attribute1 with categoryA and attribute2 with categoryB.',
 			fb_slight_Att1WithCatA_Att2WithCatB : 'Your responses suggested a slight automatic association for attribute1 with categoryA and attribute2 with categoryB.',
 			fb_equal_CatAvsCatB : 'Your responses suggested little or no automatic association between attribute2 and attribute1 with categoryA and categoryB.'
-
-		
-		
-		
     });
 });
