@@ -372,7 +372,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
                         myLogs.push(logs[iLog]);
                     }
                 }
-                var content = myLogs.map(function (log) { 
+                var content = myLogs.map(function (log) {
                     return [
                         log.data.block, //'block'
                         log.trial_id, //'trial'
@@ -405,7 +405,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
                             piCurrent.feedback, //'fb'
                             block3Cond //'bOrd'
                         ]);
-                console.log('added');
+                //console.log('added');
                 content.unshift(headers);
                 return toCsv(content);
 
@@ -1233,7 +1233,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 			for (iBlock7Mini = 1; iBlock7Mini <= blockParamsCombined.nMiniBlocks; iBlock7Mini++)
 			{
 				trialSequence.push(getMiniMixer4({
-				nTrialsInMini : nTrialsInMini, currentCond : blockCondition, cong:isCompatible, 
+				nTrialsInMini : nTrialsInMini, currentCond : blockCondition, cong:isCompatible,
 				rightTrial1 : rightAttTrial, leftTrial1 : leftAttTrial,
 				rightTrial2 : rightCatTrial, leftTrial2 : leftCatTrial,
 				blockNum : iBlock, blockLayout : blockLayout, parcel:'first'}));
@@ -1271,16 +1271,14 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
                     }
                 ]
             });
-            
+
             /////////////////////////////
             //add debriefing trial, the feedback will be shown with text above and under ther result.
             trialSequence.push({
                 inherit:'instructions',
                 data: {blockStart:true},
-               
                 //the feedback massege will be shown to the user at the center of the screen
                 stimuli: [
-                    
                 {
 					inherit : 'Default',
                     media : {word : (piCurrent.debriefingTextTop)},
@@ -1296,14 +1294,9 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
                     media : {word : (isTouch ? piCurrent.debriefingTextBottomTouch:piCurrent.debriefingTextBottom)},
                     location:{left:2,top:45,right:2}
                 }
-             
-                
-                
             ],
-				   
-            });	
+            });
 		}
-			
 		//////////////////////////////
 		//Add final trial
 		trialSequence.push({
