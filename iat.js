@@ -229,7 +229,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 				'Lutfen <b>I</b> tusunu <font color="#336600">rightCategory</font> icin ve <font color="#0000ff">rightAttribute</font> icin kullaniniz.<br/>'+
 				'Her bir kelime yalnizca bir kategoride yer almaktadir.<br/><br/>' +
 				'Eger bir hata yaparsaniz, kirmizi bir <font color="#ff0000"><b>X</b></font> gorunecektir. ' +
-				'İlerlemek icin lutfen diger tusa basiniz.<br/>' +
+				'Ilerlemek icin lutfen diger tusa basiniz.<br/>' +
 				'<u>Mumkun oldugunca hizli gidiniz</u> ve bu sirada dogru yanitlari secmeye gayret ediniz.<br/><br/></p>' +
 				'<p align="center">Lutfen hazir oldugunuzda <b>bosluk tusuna</b> basiniz.</font></p></div>',
 			instFirstCombinedTouch:[
@@ -274,8 +274,8 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 			instSwitchCategories : '<div><p align="center" style="font-size:20px; font-family: Helvetica, Arial, sans-serif;">' +
 				'<font color="#000000"><u>Sayfa blockNum / nBlocks </u><br/><br/></p>' +
 				'<p style="font-size:18px; text-align:left; vertical-align:bottom; margin-left:10px; font-family: Helvetica, Arial, sans-serif;">' +
-				'<b>Lütfen dikkat ediniz, etiketler yer değiştirdi! </b><br/>' +
-				'Lütfen sol isaret parmaginizi <b>E</b> harfine su kategoriler icin yerlestiriniz <font color="#336600">leftCategory</font>.<br/>' +
+				'<b>Lutfen dikkat ediniz, etiketler yer degistirdi! </b><br/>' +
+				'Lutfen sol isaret parmaginizi <b>E</b> harfine su kategoriler icin yerlestiriniz <font color="#336600">leftCategory</font>.<br/>' +
 				'Lutfen sag isaret parmaginizi <b>I</b> tusuna su kategoriler icin yerlestiriniz <font color="#336600">rightCategory</font>.<br/>' +
 				'<u>Mumkun oldugunca hizli gidiniz</u> ve bu sirada dogru yanitlari secmeye gayret ediniz. <br/><br/></p>' +
 				'<p align="center" style="font-family: Helvetica, Arial, sans-serif;">Lutfen hazir oldugunuzda <b>asagidaki</b> yesil alana dokununuz.</p>',
@@ -286,7 +286,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 					'</p>',
 					'<p align="left" style="font-family: Helvetica, Arial, sans-serif; margin-left:5px;">',
 						'<br/>',
-						'Lütfen dikkat ediniz, etiketler yer değiştirdi!<br/>',
+						'Lutfen dikkat ediniz, etiketler yer degistirdi!<br/>',
 						'Lutfen sol isaret parmaginizi <b>soldaki</b> yesil alana su kelimeler icin <font color="#336600">leftCategory</font> yerlestiriniz.<br/>',
 						'Lutfen sag isaret parmaginizi <b>sagdaki</b> yesil alana su kelimeler icin <font color="#336600">rightCategory</font> yerlestiriniz. <br/>',
 						'Kelimeler tek tek ekranda belirecektir.<br/>',
