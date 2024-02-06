@@ -172,9 +172,9 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 			// the name of the categories and the block's number variables:
 			// leftCategory, rightCategory, leftAttribute and rightAttribute, blockNum, nBlocks.
 			// Notice that this is HTML text.
-			instAttributePractice: '<div><p align="center" style="font-size:20px; font-family: Helvetica, Arial, sans-serif;">' +
+			instAttributePractice: '<div><p align="center" style="font-size:20px; font-family:arial;">' +
 				'<font color="#000000"><u>Sayfa blockNum / nBlocks </u><br/><br/></p>' +
-				'<p style="font-size:18px; text-align:left; vertical-align:bottom; margin-left:10px; font-family: Helvetica, Arial, sans-serif;">' +
+				'<p style="font-size:18px; text-align:left; vertical-align:bottom; margin-left:10px; font-family:arial;">' +
 				'Lutfen sol isaret parmaginizi <b>E</b> tusuna su kategoride yer alan kelimeler icin yerlestiriniz <font color="#0000ff">leftAttribute.</font>' +
 				'<br/>Lutfen sag isaret parmaginizi <b>I</b> tusuna su kategoride yer alan kelimeler icin yerlestiriniz <font color="#0000ff">rightAttribute</font>.<br/><br/>' +
 				'Eger bir hata yaparsaniz, kirmizi bir <font color="#ff0000"><b>X</b></font> gorunecektir. ' +
@@ -186,7 +186,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 					'<p align="center">',
 						'<u>Sayfa blockNum / nBlocks</u>',
 					'</p>',
-					'<p align="left" style="font-family: Helvetica, Arial, sans-serif; margin-left:5px;">',
+					'<p align="left" style="font-family:arial; margin-left:5px;">',
 						'<br/>',
 						'Lutfen sol isaret parmaginizi <b>soldaki</b> yesil alana su kategoride yer alan kelimeler icin yerlestiriniz <font color="#0000ff">leftAttribute</font>.<br/>',
 						'Lutfen sag isaret parmaginizi <b>sagdaki</b> yesil alana su kategoride yer alan kelimeler icin yerlestiriniz <font color="#0000ff">rightAttribute</font>.<br/>',
@@ -194,12 +194,12 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 						'<br/>',
 						'Eger bir hata yaparsaniz, kirmizi bir <font color="#ff0000"><b>X</b></font> gorunecektir. Lutfen diger tarafa dokununuz. <u>Mumkun oldugunca hizli gidiniz</u> ve bu sirada dogru yanitlari secmeye gayret ediniz.',
 					'</p>',
-					'<p align="center" style="font-family: Helvetica, Arial, sans-serif;">Lutfen hazir oldugunuzda <b>asagidaki</b> yesil alana dokununuz.</p>',
+					'<p align="center" style="font-family:arial;">Lutfen hazir oldugunuzda <b>asagidaki</b> yesil alana dokununuz.</p>',
 				'</div>'
 			].join('\n'),
-			instCategoriesPractice: '<div><p align="center" style="font-size:20px; font-family: Helvetica, Arial, sans-serif;">' +
+			instCategoriesPractice: '<div><p align="center" style="font-size:20px; font-family:arial;">' +
 				'<font color="#000000"><u>Sayfa blockNum / nBlocks </u><br/><br/></p>' +
-				'<p style="font-size:18px; text-align:left; vertical-align:bottom; margin-left:10px; font-family: Helvetica, Arial, sans-serif;">' +
+				'<p style="font-size:18px; text-align:left; vertical-align:bottom; margin-left:10px; font-family:arial;">' +
 				'Lutfen sol isaret parmaginizi <b>E</b> tusuna su kategoride yer alan kelimeler icin yerlestiriniz <font color="#0000ff">leftAttribute.</font>' +
 				'<br/>Lutfen sag isaret parmaginizi <b>I</b> tusuna su kategoride yer alan kelimeler icin yerlestiriniz <font color="#0000ff">rightAttribute</font>.<br/><br/>' +
 				'Eger bir hata yaparsaniz, kirmizi bir <font color="#ff0000"><b>X</b></font> gorunecektir. ' +
@@ -211,20 +211,20 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 					'<p align="center">',
 						'<u>Sayfa blockNum / nBlocks</u>',
 					'</p>',
-					'<p align="left" style="font-family: Helvetica, Arial, sans-serif; margin-left:5px;">',
+					'<p align="left" style="font-family:arial; margin-left:5px;">',
 						'<br/>',
 						'Lutfen sol isaret parmaginizi <b>soldaki</b> yesil alana su kategoride yer alan kelimeler icin yerlestiriniz <font color="#0000ff">leftAttribute</font>.<br/>',
 						'Lutfen sag isaret parmaginizi <b>sagdaki</b> yesil alana su kategoride yer alan kelimeler icin yerlestiriniz <font color="#0000ff">rightAttribute</font>.<br/>',
 						'Kelimeler tek tek ekranda belirecektir.<br/><br/>',
 						'Eger bir hata yaparsaniz, kirmizi bir <font color="#ff0000"><b>X</b></font> gorunecektir. Lutfen diger tarafa dokununuz. <u>Mumkun oldugunca hizli gidiniz</u> ve bu sirada dogru yanitlari secmeye gayret ediniz.',
 					'</p>',
-					'<p align="center" style="font-family: Helvetica, Arial, sans-serif;">Lutfen hazir oldugunuzda <b>asagidaki</b> yesil alana dokununuz.</p>',
+					'<p align="center" style="font-family:arial;">Lutfen hazir oldugunuzda <b>asagidaki</b> yesil alana dokununuz.</p>',
 				'</div>'
 			].join('\n'),
 
-			instFirstCombined : '<div><p align="center" style="font-size:20px; font-family: Helvetica, Arial, sans-serif;">' +
+			instFirstCombined : '<div><p align="center" style="font-size:20px; font-family:arial;">' +
 				'<font color="#000000"><u>Sayfa blockNum / nBlocks </u><br/><br/></p>' +
-				'<p style="font-size:18px; text-align:left; vertical-align:bottom; margin-left:10px; font-family: Helvetica, Arial, sans-serif;">' +
+				'<p style="font-size:18px; text-align:left; vertical-align:bottom; margin-left:10px; font-family:arial;">' +
 				'Lutfen <b>E</b> tusunu <font color="#336600">leftCategory</font> icin ve <font color="#0000ff">leftAttribute</font> icin kullaniniz.<br/>'+
 				'Lutfen <b>I</b> tusunu <font color="#336600">rightCategory</font> icin ve <font color="#0000ff">rightAttribute</font> icin kullaniniz.<br/>'+
 				'Her bir kelime yalnizca bir kategoride yer almaktadir.<br/><br/>' +
@@ -239,17 +239,17 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 					'</p>',
 					'<br/>',
 					'<br/>',
-					'<p align="left" style="font-family: Helvetica, Arial, sans-serif; margin-left:5px;">',
+					'<p align="left" style="font-family:arial; margin-left:5px;">',
 						'Lutfen sol isaret parmaginizi <b>soldaki</b> yesil alana su kategoride yer alan kelimeler <font color="#336600">leftCategory</font> ve su kategoride yer alan kelimeler icin yerlestiriniz <font color="#0000ff">leftAttribute</font>.</br>',
 						'Lutfen sol isaret parmaginizi <b>sagdaki </b> yesil alana su kategoride yer alan kelimeler <font color="#336600">rightCategory</font> ve su kategoride yer alan kelimeler icin yerlestiriniz <font color="#0000ff">rightAttribute</font>.</br>',
 						'Eger bir hata yaparsaniz, kirmizi bir <font color="#ff0000"><b>X</b></font> gorunecektir. Lutfen diger tarafa dokununuz. <u>Mumkun oldugunca hizli gidiniz</u> ve bu sirada dogru yanitlari secmeye gayret ediniz.</br>',
 					'</p>',
-					'<p align="center" style="font-family: Helvetica, Arial, sans-serif;">Lutfen hazir oldugunuzda <b>asagidaki</b> yesil alana dokununuz.</p>',
+					'<p align="center" style="font-family:arial;">Lutfen hazir oldugunuzda <b>asagidaki</b> yesil alana dokununuz.</p>',
 				'</div>'
 			].join('\n'),
-			instSecondCombined : '<div><p align="center" style="font-size:20px; font-family: Helvetica, Arial, sans-serif;">' +
+			instSecondCombined : '<div><p align="center" style="font-size:20px; font-family:arial;">' +
 				'<font color="#000000"><u>Sayfa blockNum / nBlocks </u><br/><br/></p>' +
-				'<p style="font-size:18px; text-align:left; vertical-align:bottom; margin-left:10px; font-family: Helvetica, Arial, sans-serif;">' +
+				'<p style="font-size:18px; text-align:left; vertical-align:bottom; margin-left:10px; font-family:arial;">' +
 				'Bu kisim, bir onceki kisimla aynidir.<br/>' +
 				'Lutfen <b>E</b> tusunu <font color="#336600">leftCategory</font> icin ve <font color="#0000ff">leftAttribute</font> icin kullaniniz.<br/>'+
 				'Lutfen <b>I</b> tusunu <font color="#336600">rightCategory</font> icin ve <font color="#0000ff">rightAttribute</font> icin kullaniniz.<br/>'+
@@ -262,36 +262,36 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 					'<p align="center"><u>Sayfa blockNum / nBlocks</u></p>',
 					'<br/>',
 					'<br/>',
-					'<p align="left" style="font-family: Helvetica, Arial, sans-serif; margin-left:5px;">',
+					'<p align="left" style="font-family:arial; margin-left:5px;">',
 						'Lutfen sol isaret parmaginizi <b>soldaki</b> yesil alana su kategoride yer alan kelimeler <font color="#336600">leftCategory</font> ve su kategoride yer alan kelimeler icin yerlestiriniz <font color="#0000ff">leftAttribute</font>.<br/>',
 						'Lutfen sol isaret parmaginizi <b>sagdaki </b> yesil alana su kategoride yer alan kelimeler <font color="#336600">rightCategory</font> ve su kategoride yer alan kelimeler icin yerlestiriniz <font color="#0000ff">rightAttribute</font>.<br/>',
 						'Eger bir hata yaparsaniz, kirmizi bir <font color="#ff0000"><b>X</b></font> gorunecektir. Lutfen diger tarafa dokununuz. <br/>',
 						'<u>Mumkun oldugunca hizli gidiniz</u> ve bu sirada dogru yanitlari secmeye gayret ediniz.<br/>',
 					'</p>',
-					'<p align="center" style="font-family: Helvetica, Arial, sans-serif;">Lutfen hazir oldugunuzda <b>asagidaki</b> yesil alana dokununuz.</p>',
+					'<p align="center" style="font-family:arial;">Lutfen hazir oldugunuzda <b>asagidaki</b> yesil alana dokununuz.</p>',
 				'</div>'
 			].join('\n'),
-			instSwitchCategories : '<div><p align="center" style="font-size:20px; font-family: Helvetica, Arial, sans-serif;">' +
+			instSwitchCategories : '<div><p align="center" style="font-size:20px; font-family:arial;">' +
 				'<font color="#000000"><u>Sayfa blockNum / nBlocks </u><br/><br/></p>' +
-				'<p style="font-size:18px; text-align:left; vertical-align:bottom; margin-left:10px; font-family: Helvetica, Arial, sans-serif;">' +
+				'<p style="font-size:18px; text-align:left; vertical-align:bottom; margin-left:10px; font-family:arial;">' +
 				'<b>Lutfen dikkat ediniz, etiketler yer degistirdi! </b><br/>' +
 				'Lutfen sol isaret parmaginizi <b>E</b> harfine su kategoriler icin yerlestiriniz <font color="#336600">leftCategory</font>.<br/>' +
 				'Lutfen sag isaret parmaginizi <b>I</b> tusuna su kategoriler icin yerlestiriniz <font color="#336600">rightCategory</font>.<br/>' +
 				'<u>Mumkun oldugunca hizli gidiniz</u> ve bu sirada dogru yanitlari secmeye gayret ediniz. <br/><br/></p>' +
-				'<p align="center" style="font-family: Helvetica, Arial, sans-serif;">Lutfen hazir oldugunuzda <b>asagidaki</b> yesil alana dokununuz.</p>',
+				'<p align="center" style="font-family:arial;">Lutfen hazir oldugunuzda <b>asagidaki</b> yesil alana dokununuz.</p>',
 			instSwitchCategoriesTouch: [
 				'<div>',
 					'<p align="center">',
 						'<u>Sayfa blockNum / nBlocks</u>',
 					'</p>',
-					'<p align="left" style="font-family: Helvetica, Arial, sans-serif; margin-left:5px;">',
+					'<p align="left" style="font-family:arial; margin-left:5px;">',
 						'<br/>',
 						'Lutfen dikkat ediniz, etiketler yer degistirdi!<br/>',
 						'Lutfen sol isaret parmaginizi <b>soldaki</b> yesil alana su kelimeler icin <font color="#336600">leftCategory</font> yerlestiriniz.<br/>',
 						'Lutfen sag isaret parmaginizi <b>sagdaki</b> yesil alana su kelimeler icin <font color="#336600">rightCategory</font> yerlestiriniz. <br/>',
 						'Kelimeler tek tek ekranda belirecektir.<br/>',
 						'Eger bir hata yaparsaniz, kirmizi bir <font color="#ff0000"><b>X</b></font> gorunecektir. Lutfen diger tarafa dokununuz. <u>Mumkun oldugunca hizli gidiniz</u> ve bu sirada dogru yanitlari secmeye gayret ediniz.<br/></p>',
-						'<p align="center" style="font-family: Helvetica, Arial, sans-serif;">Lutfen hazir oldugunuzda <b>asagidaki</b> yesil alana dokununuz.</p>',
+						'<p align="center" style="font-family:arial;">Lutfen hazir oldugunuzda <b>asagidaki</b> yesil alana dokununuz.</p>',
 				'</div>'
 			].join('\n'),
 
