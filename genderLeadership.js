@@ -71,6 +71,9 @@ define(['pipAPI','https://denisakov.github.io/qualtrics/iat.js'], function(APICo
 			//Stimulus css
 			stimulusCss : {color:'#31940F','font-size':'2.3em'}
 		},
+		base_url : {//Where are your images at?
+			image : 'http://denisakov.github.io/qualtrics/images/'
+		},
 		showDebriefing:true, //Show feedback in the last trial? Relevant only in a Qualtrics IAT because in Qualtrics we cannot access the saved feedback and IAT score later in the survey.
 		//Texts for the trials that show the debriefing.
 		preDebriefingText : 'Asagidaki yesil alana dokunarak sonucunuza ulasabilirsiniz.', //Text in the trial that comes before showing the debriefing.
