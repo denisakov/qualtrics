@@ -637,15 +637,23 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 
 		var basicTrialSets = {};
 		//Four trials for the attributes.
-		basicTrialSets.att1left = createBasicTrialSet({side:'left', stimSet: 'att1'});
-		basicTrialSets.att1right = createBasicTrialSet({side:'right', stimSet: 'att1'});
-		basicTrialSets.att2left = createBasicTrialSet({side:'left', stimSet: 'att2'});
-		basicTrialSets.att2right = createBasicTrialSet({side:'right', stimSet: 'att2'});
+		basicTrialSets.att1left =
+			createBasicTrialSet({side:'left', stimSet: 'att1'});
+		basicTrialSets.att1right =
+			createBasicTrialSet({side:'right', stimSet: 'att1'});
+		basicTrialSets.att2left =
+			createBasicTrialSet({side:'left', stimSet: 'att2'});
+		basicTrialSets.att2right =
+			createBasicTrialSet({side:'right', stimSet: 'att2'});
 		//Four trials for the categories.
-		basicTrialSets.cat1left = createBasicTrialSet({side:'left', stimSet: 'cat1'});
-		basicTrialSets.cat1right = createBasicTrialSet({side:'right', stimSet: 'cat1'});
-		basicTrialSets.cat2left = createBasicTrialSet({side:'left', stimSet: 'cat2'});
-		basicTrialSets.cat2right = createBasicTrialSet({side:'right', stimSet: 'cat2'});
+		basicTrialSets.cat1left =
+			createBasicTrialSet({side:'left', stimSet: 'cat1'});
+		basicTrialSets.cat1right =
+			createBasicTrialSet({side:'right', stimSet: 'cat1'});
+		basicTrialSets.cat2left =
+			createBasicTrialSet({side:'left', stimSet: 'cat2'});
+		basicTrialSets.cat2right =
+			createBasicTrialSet({side:'right', stimSet: 'cat2'});
 
 		API.addTrialSets(basicTrialSets);
 
@@ -698,7 +706,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 			}],
 			// this stimulus used for giving feedback, in this case only the error notification
 			error : [{
-				handle:'error', location: {top: 75}, css:{color:'red','font-size':'4em'}, media: {word:'X'}, nolog:true
+				handle:'error', location: {top: 75}, css:{color:'red',font-size:'4em'}, media: {word:'X'}, nolog:true
 			}],
 
 			touchInputStimuli: [
