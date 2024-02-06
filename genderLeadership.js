@@ -83,7 +83,7 @@ define(['pipAPI','https://denisakov.github.io/qualtrics/iat.js'], function(APICo
 		//ATTENTION: We do not recommend showing participants their results. The IAT is a typical psychological measure so it is not very accurate. 
 		//In Project Implicit's website, you can see that we added much text to explain that there is still much unknown about the meaning of these results.
 		//We strongly recommend that you provide all these details in the debriefing of the experiment.
-		debriefingTextBottom : 'Lutfen sonucunuzu aklinizda tutunuz ve bir sonraki asamada coktan secmeli menuden seciniz.' //Will be shown below the feedback text.
+		debriefingTextBottom : 'Lutfen sonucunuzu aklinizda tutunuz ve bir sonraki asamada coktan secmeli menuden seciniz.', //Will be shown below the feedback text.
 		debriefingTextBottomTouch : 'Lutfen sonucunuzu aklinizda tutunuz ve bir sonraki asamada coktan secmeli menuden seciniz.' //Will be shown below the feedback text.
 
 	});
