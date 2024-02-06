@@ -108,7 +108,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 				stimulusCss : {color:'#0000FF','font-size':'2.3em'}
 			},
 			base_url : {//Where are your images at?
-				image : 'http://denisakov.github.io/qualtrics/images/'
+				image : '/implicit/user/yba/pipexample/biat/images/'
 			},
 			//nBlocks : 7, This is not-supported anymore. If you want a 5-block IAT, change blockSecondCombined_nTrials to 0.
 
@@ -304,15 +304,15 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 			//attribute1, and attribute2 will be replaced with the name of attribute1 and attribute2.
 			//categoryA is the name of the category that is found to be associated with attribute1,
 			//and categoryB is the name of the category that is found to be associated with attribute2.
-			fb_strong_Att1WithCatA_Att2WithCatB : 'Yanitlariniz attribute1 ile categoryA ve attribute2 ile categoryB arasinda guclu bir otomatik cagrisiminiz bulunduguna isaret etmektedir.',
-			fb_moderate_Att1WithCatA_Att2WithCatB : 'Yanitlariniz attribute1 ile categoryA ve attribute2 ile categoryB arasinda ortalama bir otomatik cagrisiminiz bulunduguna isaret etmektedir.',
-			fb_slight_Att1WithCatA_Att2WithCatB : 'Yanitlariniz attribute1 ile categoryA ve attribute2 ile categoryB arasinda hafif bir otomatik cagrisiminiz bulunduguna isaret etmektedir.',
-			fb_equal_CatAvsCatB : 'Yanitlariniz categoryA ve categoryB arasinda otomatik bir cagrisiminiz bulunmadigina isaret etmektedir.',
+			// fb_strong_Att1WithCatA_Att2WithCatB : 'Yanitlariniz attribute1 ile categoryA ve attribute2 ile categoryB arasinda guclu bir otomatik cagrisiminiz bulunduguna isaret etmektedir.',
+			// fb_moderate_Att1WithCatA_Att2WithCatB : 'Yanitlariniz attribute1 ile categoryA ve attribute2 ile categoryB arasinda ortalama bir otomatik cagrisiminiz bulunduguna isaret etmektedir.',
+			// fb_slight_Att1WithCatA_Att2WithCatB : 'Yanitlariniz attribute1 ile categoryA ve attribute2 ile categoryB arasinda hafif bir otomatik cagrisiminiz bulunduguna isaret etmektedir.',
+			// fb_equal_CatAvsCatB : 'Yanitlariniz categoryA ve categoryB arasinda otomatik bir cagrisiminiz bulunmadigina isaret etmektedir.',
 
-			// fb_strong_Att1WithCatA_Att2WithCatB : 'Your responses suggested a strong automatic preference for categoryB over categoryA.',
-			// fb_moderate_Att1WithCatA_Att2WithCatB : 'Your responses suggested a moderate automatic preference for categoryB over categoryA.',
-			// fb_slight_Att1WithCatA_Att2WithCatB : 'Your responses suggested a slight automatic preference for categoryB over categoryA.',
-			// fb_equal_CatAvsCatB : 'Your responses suggested no automatic preference between categoryA and categoryB.',
+			fb_strong_Att1WithCatA_Att2WithCatB : 'Your responses suggested a strong automatic preference for categoryB over categoryA.',
+			fb_moderate_Att1WithCatA_Att2WithCatB : 'Your responses suggested a moderate automatic preference for categoryB over categoryA.',
+			fb_slight_Att1WithCatA_Att2WithCatB : 'Your responses suggested a slight automatic preference for categoryB over categoryA.',
+			fb_equal_CatAvsCatB : 'Your responses suggested no automatic preference between categoryA and categoryB.',
 
 			//Error messages in the feedback
 			manyErrors: 'Herhangi bir yanit belirlemek icin cok fazla hata yapilmistir.',
