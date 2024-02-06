@@ -307,7 +307,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 			fb_strong_Att1WithCatA_Att2WithCatB : 'Yanitlariniz attribute1 ile categoryA ve attribute2 ile categoryB arasinda guclu bir otomatik cagrisiminiz bulunduguna isaret etmektedir.',
 			fb_moderate_Att1WithCatA_Att2WithCatB : 'Yanitlariniz attribute1 ile categoryA ve attribute2 ile categoryB arasinda ortalama bir otomatik cagrisiminiz bulunduguna isaret etmektedir.',
 			fb_slight_Att1WithCatA_Att2WithCatB : 'Yanitlariniz attribute1 ile categoryA ve attribute2 ile categoryB arasinda hafif bir otomatik cagrisiminiz bulunduguna isaret etmektedir.',
-			fb_equal_CatAvsCatB : 'Yanıtlarınız categoryA ve categoryB arasinda otomatik bir cagrisiminiz bulunmadigina isaret etmektedir.',
+			fb_equal_CatAvsCatB : 'Yanitlariniz categoryA ve categoryB arasinda otomatik bir cagrisiminiz bulunmadigina isaret etmektedir.',
 
 			// fb_strong_Att1WithCatA_Att2WithCatB : 'Your responses suggested a strong automatic preference for categoryB over categoryA.',
 			// fb_moderate_Att1WithCatA_Att2WithCatB : 'Your responses suggested a moderate automatic preference for categoryB over categoryA.',
