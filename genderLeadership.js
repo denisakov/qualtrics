@@ -21,9 +21,9 @@ define(['pipAPI','https://denisakov.github.io/qualtrics/iat.js'], function(APICo
 			stimulusCss : {color:'#0000FF','font-size':'2.3em'}
 		},
 		attribute2 :	{
-			name : 'Kadın', //Will appear in the data.
+			name : 'Kadin', //Will appear in the data.
 			title : {
-				media : {word : 'Kadın'}, //Name of the category presented in the task.
+				media : {word : 'Kadin'}, //Name of the category presented in the task.
 				css : {color:'#0000FF','font-size':'1.8em'}, //Style of the category title.
 				height : 4 //Used to position the "Or" in the combined block.
 			},
@@ -32,7 +32,7 @@ define(['pipAPI','https://denisakov.github.io/qualtrics/iat.js'], function(APICo
 				{word: 'Zeynep'},
 				{word: 'Burcu'},
 				{word: 'Hatice'},
-				{word: 'Müge'}
+				{word: 'Muge'}
 			],
 			//Stimulus css
 			stimulusCss : {color:'#0000FF','font-size':'2.3em'}
