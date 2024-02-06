@@ -315,9 +315,13 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 			fb_equal_CatAvsCatB : 'Your responses suggested no automatic preference between categoryA and categoryB.',
 
 			//Error messages in the feedback
-			manyErrors: 'Herhangi bir yanit belirlemek icin cok fazla hata yapilmistir.',
-			tooFast: 'Herhangi bir yanit belirlemek icin cok fazla hizli giris yapilmistir.',
-			notEnough: 'Herhangi bir yanit belirlemek icin yeterli giris yapilmamistir.'
+			// manyErrors: 'Herhangi bir yanit belirlemek icin cok fazla hata yapilmistir.',
+			// tooFast: 'Herhangi bir yanit belirlemek icin cok fazla hizli giris yapilmistir.',
+			// notEnough: 'Herhangi bir yanit belirlemek icin yeterli giris yapilmamistir.'
+
+			manyErrors: 'There were too many errors made to determine a result.',
+			tooFast: 'There were too many fast trials to determine a result.',
+			notEnough: 'There were not enough trials to determine a result.'
 		};
 
 		// extend the "current" object with the default
