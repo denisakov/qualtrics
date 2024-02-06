@@ -663,7 +663,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 				{css:{color:piCurrent.fontColor,'font-size':'1.4em','font-family':'Helvetica'}}
 			],
 			Custom: [
-				{css:{color:'#de0909','font-size':'2.1em','font-weight':'700','font-family':'Helvetica'}}
+				{css:{color:'#065c15','font-size':'2.1em','font-weight':'700','font-family':'Helvetica'}}
 			],
 
 			instructions: [
