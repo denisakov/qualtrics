@@ -180,7 +180,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 				'Eger bir hata yaparsaniz, kirmizi bir <font color="#ff0000"><b>X</b></font> gorunecektir. ' +
 				'İlerlemek icin lutfen diger tusa basiniz <br/>' +
 				'<u>Mumkun oldugunca hizli gidiniz </u> ve bu sirada dogru yanitlari secmeye gayret ediniz.<br/><br/></p>'+
-				'<p align="center">Lutfen hazir oldugunuzda <b>bosluk tusuna /b> basiniz.</font></p></div>',
+				'<p align="center">Lutfen hazir oldugunuzda <b>bosluk tusuna </b> basiniz.</font></p></div>',
 			instAttributePracticeTouch: [
 				'<div>',
 					'<p align="center">',
@@ -203,9 +203,9 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 				'Lutfen sol isaret parmaginizi <b>E</b> tusuna su kategoride yer alan kelimeler icin yerlestiriniz <font color="#0000ff">leftAttribute.</font>' +
 				'<br/>Lutfen sag isaret parmaginizi <b>I</b> tusuna su kategoride yer alan kelimeler icin yerlestiriniz <font color="#0000ff">rightAttribute</font>.<br/><br/>' +
 				'Eger bir hata yaparsaniz, kirmizi bir <font color="#ff0000"><b>X</b></font> gorunecektir. ' +
-				'İlerlemek icin lutfen diger tusa basiniz <br/>' +
+				'Ilerlemek icin lutfen diger tusa basiniz <br/>' +
 				'<u>Mumkun oldugunca hizli gidiniz </u> ve bu sirada dogru yanitlari secmeye gayret ediniz.<br/><br/></p>'+
-				'<p align="center">Lutfen hazir oldugunuzda <b>bosluk tusuna /b> basiniz.</font></p></div>',
+				'<p align="center">Lutfen hazir oldugunuzda <b>bosluk tusuna </b> basiniz.</font></p></div>',
 			instCategoriesPracticeTouch: [
 				'<div>',
 					'<p align="center">',
