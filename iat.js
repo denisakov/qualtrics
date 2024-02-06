@@ -662,6 +662,9 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 			Default: [
 				{css:{color:piCurrent.fontColor,'font-size':'1.4em','font-family':'Helvetica'}}
 			],
+			Custom: [
+				{css:{color:'#de0909','font-size':'2.1em','font-weight':'700','font-family':'Helvetica'}}
+			],
 
 			instructions: [
 				{css:{'font-size':'1.2em','font-family':'Helvetica',color:'black', lineHeight:1.2}, nolog:true, 
@@ -1281,7 +1284,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
                     location:{left:2,top:30,right:2}
                 },
                 {
-					inherit : 'Default',
+					inherit : 'Custom',
                     media : {word : (isTouch ? piCurrent.debriefingTextBottomTouch:piCurrent.debriefingTextBottom)},
                     location:{left:2,top:45,right:2}
                 }
