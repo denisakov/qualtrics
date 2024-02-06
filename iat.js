@@ -669,11 +669,11 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 		API.addStimulusSets({
 			// This Default stimulus is inherited by the other stimuli so that we can have a consistent look and change it from one place
 			Default: [
-				{css:{color:piCurrent.fontColor,'font-size':'2em'}}
+				{css:{color:piCurrent.fontColor,'font-size':'1.4em','font-family':'Helvetica'}}
 			],
 
 			instructions: [
-				{css:{'font-size':'1.4em',color:'black', lineHeight:1.2}, nolog:true, 
+				{css:{'font-size':'1.2em','font-family':'Helvetica',color:'black', lineHeight:1.2}, nolog:true, 
 					location: {left:0,top:0}, size:{width:piCurrent.instWidth}}
 			],
 
@@ -710,7 +710,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 			}],
 			// this stimulus used for giving feedback, in this case only the error notification
 			error : [{
-				handle:'error', location: {top: 75}, css:{color:'red','font-size':'4em'}, media: {word:'X'}, nolog:true
+				handle:'error', location: {top: 75}, css:{color:'red','font-family':'Helvetica','font-size':'4em'}, media: {word:'x'}, nolog:true
 			}],
 
 			touchInputStimuli: [
