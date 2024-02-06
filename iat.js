@@ -706,7 +706,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 			}],
 			// this stimulus used for giving feedback, in this case only the error notification
 			error : [{
-				handle:'error', location: {top: 75}, css:{color:'red',font-size:'4em'}, media: {word:'X'}, nolog:true
+				handle:'error', location: {top: 75}, css:{color:'red','font-size':'4em'}, media: {word:'X'}, nolog:true
 			}],
 
 			touchInputStimuli: [
@@ -787,11 +787,11 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 						firstCss: buildStyle(_.get(params, 'left1.title.css')),
 						second: buildContent(_.get(params, 'left2.title.media')),
 						secondCss: buildStyle(_.get(params, 'left2.title.css')),
-						leftKeyText : buildContent(_.get(piCurrent, 'leftKeyText')), 
-						rightKeyText : buildContent(_.get(piCurrent, 'rightKeyText')), 
-						keysCss : buildStyle(_.get(piCurrent, 'keysCss')), 
-						orText : buildContent(_.get(piCurrent, 'orText')), 
-						orCss : buildStyle(_.get(piCurrent, 'orCss')), 
+						leftKeyText : buildContent(_.get(piCurrent, 'leftKeyText')),
+						rightKeyText : buildContent(_.get(piCurrent, 'rightKeyText')),
+						keysCss : buildStyle(_.get(piCurrent, 'keysCss')),
+						orText : buildContent(_.get(piCurrent, 'orText')),
+						orCss : buildStyle(_.get(piCurrent, 'orCss')),
 						isTouch: isTouch,
 						isLeft: true
 					}
@@ -804,11 +804,11 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 						firstCss: buildStyle(_.get(params, 'right1.title.css')),
 						second: buildContent(_.get(params, 'right2.title.media')),
 						secondCss: buildStyle(_.get(params, 'right2.title.css')),
-						leftKeyText : buildContent(_.get(piCurrent, 'leftKeyText')), 
-						rightKeyText : buildContent(_.get(piCurrent, 'rightKeyText')), 
-						keysCss : buildStyle(_.get(piCurrent, 'keysCss')), 
-						orText : buildContent(_.get(piCurrent, 'orText')), 
-						orCss : buildStyle(_.get(piCurrent, 'orCss')), 
+						leftKeyText : buildContent(_.get(piCurrent, 'leftKeyText')),
+						rightKeyText : buildContent(_.get(piCurrent, 'rightKeyText')),
+						keysCss : buildStyle(_.get(piCurrent, 'keysCss')),
+						orText : buildContent(_.get(piCurrent, 'orText')),
+						orCss : buildStyle(_.get(piCurrent, 'orCss')),
 						isTouch: isTouch,
 						isLeft: false
 					}
